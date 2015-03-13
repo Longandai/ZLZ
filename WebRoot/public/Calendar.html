@@ -1,0 +1,614 @@
+<html>
+<head>
+<title>日期选择</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<style>
+BODY
+{  
+	BACKGROUND-COLOR: #DDEEFF;/*#d4d0c8;*/
+  font-size: 12px;
+  margin:0px;  
+  border-left:1 solid ThreeDShadow;
+  border-top:1 solid ThreeDShadow;
+  
+}
+
+label
+{
+	FONT-FAMILY: webdings; 
+	HEIGHT: 10px;
+	width:15px;
+	overflow:hiden;
+	font-size:5pt;
+	margin:0;
+	padding:0;
+	BACKGROUND-COLOR: #C8D6FB;
+	border-style:outset;
+	border-width:1;
+	border-left-width:0;
+	cursor:hand;
+}
+
+
+TD.Selected
+{
+  font-size: 12px;
+  cursor:hand;  
+	color:white;
+	BACKGROUND-COLOR: royalblue;
+  align:center ;
+  BORDER-BOTTOM: 1 inset;
+  BORDER-LEFT: 1 inset;
+  BORDER-RIGHT: 1 inset;
+  BORDER-TOP: 1 inset
+}
+
+TD.thisMonth
+{
+  font-size: 12px;
+    cursor:hand;  
+    align:center ;
+    BORDER-BOTTOM: 1 outset;
+    BORDER-LEFT: 1 outset;
+    BORDER-RIGHT: 1 outset;
+    BORDER-TOP: 1 outset
+}
+
+TD
+{
+  font-size: 12px;
+    cursor:default;
+    align:center ;
+    BORDER-BOTTOM: 1 outset;
+    BORDER-LEFT: 1 outset;
+    BORDER-RIGHT: 1 outset;
+    BORDER-TOP: 1 outset
+}
+
+TD.Condition
+{
+  font-size: 12px;
+    cursor:default;
+    align:center ;
+    BORDER-BOTTOM: 1 ;
+    BORDER-LEFT: 1 ;
+    BORDER-RIGHT: 1 ;
+    BORDER-TOP: 1 
+}
+
+TD.PreMonth
+{
+  font-size: 12px;
+    cursor:hand;
+    COLOR: #EEAA00; 
+    align:center ;
+    BORDER-BOTTOM: 1 outset;
+    BORDER-LEFT: 1 outset;
+    BORDER-RIGHT: 1 outset;
+    BORDER-TOP: 1 outset
+}
+
+TD.NextMonth
+{
+  font-size: 12px;
+    cursor:hand;
+    COLOR: #EEAA00; 
+    align:center ;
+    BORDER-BOTTOM: 1 outset;
+    BORDER-LEFT: 1 outset;
+    BORDER-RIGHT: 1 outset;
+    BORDER-TOP: 1 outset
+}
+
+Input.ComboBox
+{
+	height:20px;
+  font-size: 12px;
+	border: 1px solid #7F9DB9;
+	cursor:default;
+	border-right-width: 0; 
+}
+
+INPUT.CheckBox {
+	border: 0px;
+  font-size: 12px;
+	cursor:default;
+}
+SELECT 
+{
+  font-size: 12px;
+	border:1px solid #ADAFF8;
+	background:transport;
+}
+
+</style>
+<script language="JavaScript">
+<!--
+var onIntervalHandle;
+var oTimeoutHandle;
+//初始化
+function Init()
+{
+self.dialogHeight=(thisTab.offsetHeight)/13.2;
+ self.dialogWidth=thisTab.offsetWidth/15.2;
+// ListYears(); 
+ ListDays(); 
+}
+
+function ListPreMondth(theYear,theMonth,theCell)
+{
+ var theRow; 
+ if (theMonth==1)
+  {
+   theYear--;
+   theMonth=12;
+  }
+ else
+   theMonth--;
+ for(theDay=getDays(theYear,theMonth);theDay>=1;theDay--)
+ {
+   if (theCell==0)
+     break;
+   theRow=thisTab.rows(2);
+   theRow.cells(theCell-1).innerText=theDay; 
+   theRow.cells(theCell-1).className="PreMonth";
+	theCell--;
+ }
+}
+
+//列出当前月份的天列表
+
+function ListDays()
+{
+ var theDat,today;
+ var theBegin;
+ var BeginRow=2,theRow;
+ var cellsID;
+ var theYear,theMonth;
+ 
+ if (!dataIsRight(cboYear.value,"年份"))
+ { 	
+ 	 cboYear.value=cboYear.defaultValue;
+ 	 ListDays(); 
+ 	 return;
+ }
+   
+ theYear=parseInt(cboYear.value);
+ theMonth=parseInt(cboMonth.value);
+ theRow=thisTab.rows(BeginRow);
+ theDate=new Date(theYear,theMonth-1,1);
+ today=theDate.getDay();
+ theBegin=theDate.getDay();
+ if (theBegin==0)
+    theBegin=7;
+ theBegin=theBegin-1;
+ theDate=new Date();
+ today=theDate.getDate(); 
+ ListPreMondth(theYear,theMonth,theBegin);
+ for(theDay=1;theDay<=getDays(theYear,theMonth);theDay++)
+  {
+    theRow=thisTab.rows(BeginRow);
+    theRow.cells(theBegin).innerText=theDay;
+	if (theDay==today)
+	{
+	   theRow.cells(theBegin).className="Selected";
+	   PreSelect=theRow.cells(theBegin);
+	   PreClass="thisMonth";
+	}
+	else
+       theRow.cells(theBegin).className="thisMonth";
+	theBegin++;
+    if (theBegin==7)
+    {
+      theBegin=0;
+      BeginRow++;    
+    }  
+  }
+ ListNextMondth(theYear,theMonth,theBegin,BeginRow);
+// labInfo.innerText=cboYear.value+"年"+cboMonth.options(cboMonth.selectedIndex).text;
+}
+
+//列出下月的天数列表
+function ListNextMondth(theYear,theMonth,theCell,theRow)
+{
+ var theCurRow; 
+ if (theMonth==12)
+  {
+   theYear++;
+   theMonth=1;
+  }
+ else
+   theMonth++;
+ for(theDay=1;theDay<=getDays(theYear,theMonth);theDay++)
+ {
+   if (theRow==7 && theCell==7)
+     break;
+   if (theCell==7)
+    {
+      theCell=0;
+      theRow++;    
+    }  
+   theCurRow=thisTab.rows(theRow);
+   theCurRow.cells(theCell).innerText=theDay; 
+   theCurRow.cells(theCell).className="NextMonth";
+	theCell++;
+ }
+}
+
+
+//初始化年份
+
+function ListYears()
+{
+ var theLen,theToday;
+  theToday=new Date();
+/*   for (theYear=1990;theYear<=2020;theYear++)
+  {
+   theLen=cboYear.length;
+   cboYear.length=theLen+1;
+   cboYear.options(theLen).value=theYear;
+   cboYear.options(theLen).text=theYear;
+  }*/
+  cboYear.value=theToday.getYear();
+  cboMonth.value=theToday.getMonth()+1;
+  cboH.value=(theToday.getHours()<10)?"0"+theToday.getHours():theToday.getHours();
+  cboM.value=(theToday.getMinutes()<10)?"0"+theToday.getMinutes():theToday.getMinutes();
+  cboS.value=(theToday.getSeconds()<10)?"0"+theToday.getSeconds():theToday.getSeconds();
+  oTimeoutHandle=setTimeout("ListYears()",1000);
+
+}
+
+//判断当前年份是否是润年
+
+function CheckLoop(year)
+{
+ var r1,r2;
+ r1=year/4;
+ r2=Math.round(year/4);
+ if (r1==r2)
+   return true;
+ else
+   return false;
+ r1=year/100;
+ r2=r2=Math.round(year/100);
+ if (r1==r2)
+ {
+  r1=year/400;
+  r2=r2=Math.round(year/400);
+  if (r1==r2)
+     return true;
+  else 
+    return false;
+ }
+ 
+ r1=year/400;
+ r2=Math.round(year/400);
+ if (r1==r2)
+   return true;
+ else
+  return false;
+ }
+ 
+ //返回当前月分的天数 
+ 
+ function getDays(theYear,theMonth)
+{
+   if ( theMonth==1 || theMonth==3||theMonth==5 || theMonth==7 || theMonth==8 || theMonth==10 || theMonth==12)
+      return 31; 
+   if ( theMonth==4 || theMonth==6||theMonth==9 || theMonth==11)
+      return 30;
+   if ( theMonth==2)
+   {
+     if (CheckLoop(theYear))
+       return 29;    
+     else
+       return 28;
+   }  
+ } 
+ 
+ var PreSelect,PreClass="";
+ 
+ //单击日历
+ function getSelectedDay()
+ {
+  var theIndex,theYear,theMonth;
+   if (event.button==0 && event.srcElement.tagName=="TD")
+  {
+     theIndex=event.srcElement.parentElement.rowIndex;
+     if (theIndex>=2)
+     { 
+        if (PreSelect!=null)
+           PreSelect.className=PreClass;
+	    PreSelect=event.srcElement;
+  	    PreClass=event.srcElement.className;
+        event.srcElement.className="Selected";	 	     
+	}	  
+   }
+} 
+
+//双击日历
+function returnSelectedDay()
+ {
+  var theIndex,theYear,theMonth,theDay;
+   if (event.button==0 && event.srcElement.tagName=="TD")
+  {
+     theIndex=event.srcElement.parentElement.rowIndex;
+     if (theIndex>=2)
+     { 
+        if (PreSelect!=null)
+           PreSelect.className=PreClass;
+	    PreSelect=event.srcElement;
+  	    PreClass=event.srcElement.className;
+        event.srcElement.className="Selected";	 
+	    theMonth=parseInt(cboMonth.value);
+	    theYear=parseInt(cboYear.value);
+	    if (PreClass=="NextMonth")
+   	     {
+	          if (theMonth==12)
+			    {
+				  theYear++;
+		          theMonth=1;
+				 }
+			 else
+			   theMonth++;
+	      }	  
+	    if (PreClass=="PreMonth")
+	     {
+	          if (theMonth==1)
+			   {
+			    theYear--;
+		        theMonth=12;
+			   }
+			  else
+			    theMonth--;
+	      }
+		 if (theMonth<10)
+		 	 theMonth="0"+theMonth;
+		 theDay=PreSelect.innerText;
+		 if (theDay.length==1)
+		 	 theDay="0"+theDay;
+		 //以.分割
+		 returnValue=theYear+"."+theMonth+"."+theDay;	
+		 top.close();
+	/*	 if (oTime.checked)
+		 		parent.theDataObj.value=theYear+"-"+theMonth+"-"+theDay+" "+cboH.value+":"+cboM.value+":"+cboS.value;
+		 else
+		 		parent.theDataObj.value=theYear+"-"+theMonth+"-"+theDay;
+			parent.oCalendarPopup.hide();
+		 top.close();
+	*/
+	   }	 
+	}	  
+}
+
+function setYear()
+{
+	if(event.button==2)
+		return;
+	setYearAction(arguments[0],arguments[1]);
+	onIntervalHandle=window.setInterval("setYearAction('"+arguments[0]+"')",150);
+}
+
+function setYearAction()
+{	
+	try
+	{
+		theValue=parseFloat(cboYear.value);
+		if (arguments[0]=="up")
+  		theValue=theValue+1;
+  	else
+  		theValue=theValue-1;
+		cboYear.value=theValue;
+		ListDays(); 
+	}
+	catch (ex)
+	{}
+}
+
+function setTime()
+{
+	if(event.button==2)
+		return;
+	setTimeAction(arguments[0],arguments[1]);
+	onIntervalHandle=window.setInterval("setTimeAction('"+arguments[0]+"','"+arguments[1]+"')",150);
+}
+
+function setTimeAction()
+{
+	var oTemp;
+	try
+	{
+		if (arguments[1]=="H")
+		{
+			theValue=parseFloat(cboH.value);
+			oTemp=cboH;
+		}
+		else if (arguments[1]=="M")
+		{
+			theValue=parseFloat(cboM.value);
+			oTemp=cboM;
+		}
+		else
+		{
+			theValue=parseFloat(cboS.value);
+			oTemp=cboS;
+		}
+		if (arguments[0]=="up")
+		{
+  		theValue=theValue+1;
+  		if (arguments[1]=="H")
+  			theValue=(theValue>23)?00:theValue;
+  		else
+  			theValue=(theValue>59)?00:theValue;
+  	}
+  	else
+  	{
+  		theValue=theValue-1;
+  		if (arguments[1]=="H")
+  			theValue=(theValue<0)?23:theValue;
+  		else
+  			theValue=(theValue<0)?59:theValue;
+  	}
+		oTemp.value=(theValue<10)?("0"+theValue):theValue;	}
+	catch (ex)
+	{}
+}
+
+function clearHandler()
+{
+	window.clearInterval(onIntervalHandle);
+	window.clearTimeout(oTimeoutHandle);
+}
+
+function dataIsRight(theData)
+{
+	if (isNaN(theData))
+ { 	 
+ 	 return false;
+ }
+ else
+ {
+ 	 if (theData.indexOf(".")!=-1)	 	 
+	 	 return false;	 
+	 if (parseInt(theData)<0)
+	 	return false;
+	 if (arguments[1]!=null)
+	 {
+	 		if (arguments[1]=="H")
+	 		{
+	 			if (parseInt(theData)>23)
+	 				return false;
+	 		}	
+	 		else if (arguments[1]=="M" || arguments[1]=="S")
+	 		{
+	 			if (parseInt(theData)>59)
+	 				return false;
+	 		}	
+	 }	 	
+ }
+ return true;
+}
+ document.onclick = returnSelectedDay;
+ document.onselectstart=function(){return false;};
+ document.onmouseup=function(){clearHandler();};
+ //document.ondblclick = returnSelectedDay;
+-->
+</script>
+<body scroll="no" onload="//Init();">
+<table  border="0" cellspacing="0" cellpadding="0" id="thisTab" style="FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fffcfcfe, EndColorStr=#fff4f3ee, GradientType=0)
+					progid:DXImageTransform.Microsoft.Shadow(Color=#ff919899, Strength=2, Direction=135);" >
+<tr>
+   <td nowrap colspan="7" align="right">
+   	<table border="0" cellspacing="0" cellpadding="0">
+   	 <tr>
+   		<td  class="Condition" align="right" width="100%"><input name="cboYear" class="Combobox" maxlength=4 size=4 onkeyup="ListDays();"></td>
+		   <td class="Condition" align="left" width="10px"><label UNSELECTABLE  onmousedown="setYear('up');" onmouseup="clearHandler();"><center>5</center></label><label UNSELECTABLE  onmousedown="setYear('down');" onmouseup="clearHandler();"><center>6</center></label></td>
+		   <td class="Condition" nowrap align="right">
+		   	<select name="cboMonth" onchange="ListDays();">
+		      <option value="1">一月</option>
+		      <option value="2">二月</option>
+		      <option value="3">三月</option>
+		      <option value="4">四月</option>
+		      <option value="5">五月</option>
+		      <option value="6">六月</option>
+		      <option value="7">七月</option>
+		      <option value="8">八月</option>
+		      <option value="9">九月</option>
+		      <option value="10">十月</option>
+		      <option value="11">十一月</option>
+		      <option value="12">十二月</option>
+		     </select></td>
+		   </tr>
+		 </table>
+		</td>
+  </tr>
+  <tr>
+    <td nowrap align="center" height="23" width="23">一</td>
+    <td nowrap align="center" height="23" width="23">二</td>
+    <td nowrap align="center" height="23" width="23">三</td>
+    <td nowrap align="center" height="23" width="23">四</td>
+    <td nowrap align="center" height="23" width="23">五</td>
+    <td nowrap align="center" height="23" width="23" style="color:red" bgcolor="#B1CBFA">六</td>
+    <td nowrap align="center" height="23" width="23" style="color:red" bgcolor="#B1CBFA">日</td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>
+  <tr>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+    <td align="center" height="23" width="23" bgcolor="#B1CBFA"></td>
+  </tr>  
+  <tr style="display:block" id="timePanel">
+   <td nowrap colspan="7" align="right" height="23">
+   	<table border="0" cellspacing="0" cellpadding="0">
+   		<tr >
+   		<td class="Condition" align="right" width="100%"><input type="checkbox" id="oTime" name="oTime" class="CheckBox" style="display:none">时间:</td>
+   		<td class="Condition" align="right" width="2"><input name="cboH" class="Combobox" maxlength=2 size=2 value="00" onkeyup="if (!dataIsRight(this.value,'H')) this.value=this.defaultValue;"></td>
+   		<td class="Condition" align="left" width=""><label UNSELECTABLE onmousedown="setTime('up','H');" onmouseup="clearHandler();"><center>5</center></label><label UNSELECTABLE onmousedown="setTime('down','H');" onmouseup="clearHandler();"><center>6</center></label></td>
+   		<td class="Condition" align="right" width="1">:</td>
+   		<td class="Condition" align="right" width="2"><input name="cboM" class="Combobox" maxlength=2 size=2 value="00" onkeyup=" if (!dataIsRight(this.value,'M')) this.value=this.defaultValue;"></td>
+   		<td class="Condition" align="right" width="2"><label UNSELECTABLE  onmousedown="setTime('up','M');" onmouseup="clearHandler();"><center>5</center></label><label UNSELECTABLE  onmousedown="setTime('down','M');" onmouseup="clearHandler();"><center>6</center></label></td>
+   		<td class="Condition" align="right" width="1">:</td>
+   		<td class="Condition" align="right" width="2"><input name="cboS" class="Combobox" maxlength=2 size=2 value="00" onkeyup="if (!dataIsRight(this.value,'S')) this.value=this.defaultValue;"></td>
+   		<td class="Condition" align="right" width="2"><label UNSELECTABLE  onmousedown="setTime('up','S');" onmouseup="clearHandler();"><center>5</center></label><label UNSELECTABLE  onmousedown="setTime('down','S');" onmouseup="clearHandler();"><center>6</center></label></td>
+   	</tr>
+   	</table>
+  </td>
+  </tr>
+</table>
+</body>
+<script language="javascript">
+<!--
+ListYears(); 
+ListDays(); 
+//-->
+</script>
+</html>

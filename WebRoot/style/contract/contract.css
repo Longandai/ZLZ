@@ -1,0 +1,45 @@
+html {
+	overflow-y: auto
+}
+
+body,tr,td {
+	font: 12px arial;
+}
+
+body,p,form,ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+label {
+	cursor: pointer
+}
+
+.STYLE1 {
+	font-family: "ºÚÌå"
+}
+
+.contractinput,Wdate {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+
+.STYLE2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#contractTable {
+	width: 80%;
+}

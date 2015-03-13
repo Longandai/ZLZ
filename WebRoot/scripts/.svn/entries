@@ -1,0 +1,64 @@
+8
+
+dir
+821
+https://10.135.6.178/svn/HIBC/trunk/Code/hibc-app/src/main/webapp/assets/scripts
+https://10.135.6.178/svn/HIBC
+
+
+
+2012-02-10T01:52:17.327423Z
+811
+licheng
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+be595114-9aed-af4d-8b1d-378cdeb1c9e0
+
+common.js
+file
+
+
+
+
+2012-02-10T04:19:58.000000Z
+c4e0c100fc54d9af42ffb3b7e87008bc
+2012-02-02T11:29:47.007994Z
+517
+shangyantao
+
+fileupload
+dir
+
+select.js
+file
+
+
+
+
+2012-02-01T05:32:50.000000Z
+7dcbcc7947355792da25024df62e0bc2
+2012-01-12T08:15:39.059447Z
+73
+shangyantao
+
+order
+dir
+
+contract
+dir
+
+pricelist
+dir
+

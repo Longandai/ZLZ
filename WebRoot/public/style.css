@@ -1,0 +1,45 @@
+p, td, tr, input,select 
+{
+	font-size:9pt;
+}
+
+.input 
+{
+	border-style:solid; 
+	border-width:1; 
+	cursor:default; 
+	color:#4f4f4f; 
+	background-color:#FFFFFF
+}
+
+a
+{
+	color:#666699; 
+	text-decoration:none;
+}
+a:hover
+{
+	COLOR:#6699FF;
+	text-decoration:none;
+}
+
+body
+{
+	font-size:9pt; 
+	color:#000000;
+	
+   	SCROLLBAR-BASE-COLOR: #D7F0FF;		//#E5FFE5;	/*rgb(66,93,128);*/
+	SCROLLBAR-FACE-COLOR: #D7F0FF;		//#E5FFE5;//#C8FFC8;	/*#edeff8;*/ 
+   	
+   	SCROLLBAR-SHADOW-COLOR: #0159BD;		//#73BE7B;	/* #adb6de; */ 
+   	SCROLLBAR-3DLIGHT-COLOR:#0159BD;		//#73BE7B;	/* #adb6de; */ 
+   	SCROLLBAR-ARROW-COLOR:  #0159BD;		//#73BE7B;		/* #adb6de; */
+    	
+   	SCROLLBAR-TRACK-COLOR: #ffffff;		//#EBF5E0;		//#E5FFE5;//#ffffff; 
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+
+
+
+}
+

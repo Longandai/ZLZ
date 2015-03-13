@@ -1,0 +1,10 @@
+.banner_di {  background-image: url(../../images/new/banner_di.jpg)}
+.bannera {  background-image: url(../../images/new/bannera.jpg)}
+.bannerb {  background-image: url(../../images/new/bannerb.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right}
+.scroll{  background-image: url(../../images/new/scroll.gif)}
+.tishi{  background-image: url(../../images/new/tishi_bg.gif)}
+.copyright{  background-image: url(../../images/new/copyright_bg.gif); font-size: 12px; color: #011F51; font-family: "ËÎÌו"; text-align: center }
+.tishi1b{  background-image: url(../../images/new/tishi1_bgb.gif); font-size: 12px; color: #011F51 }
+.tablebg{  background-image: url(../../images/new/table_bgb.gif);font-size: 14px; color: #011F51; font-family: "Geneva", "Arial", "Helvetica", "san-serif"; font-weight: bold}
+.login_bg{  background-image: url(../../images/new/login2.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: center }
+.login_line {  padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border: #5296D2; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px}

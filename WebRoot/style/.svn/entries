@@ -1,0 +1,70 @@
+8
+
+dir
+821
+https://10.135.6.178/svn/HIBC/trunk/Code/hibc-app/src/main/webapp/assets/style
+https://10.135.6.178/svn/HIBC
+
+
+
+2012-02-03T01:26:20.705797Z
+528
+shangyantao
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+be595114-9aed-af4d-8b1d-378cdeb1c9e0
+
+images
+dir
+
+cui.css
+file
+
+
+
+
+2012-02-01T05:32:46.000000Z
+b34f17990aafa6556968fc52d2cd4f1c
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+
+errorMsg.css
+file
+
+
+
+
+2012-02-01T05:32:46.000000Z
+e3c5cf16a5f255bd20f969d352638d8e
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+
+style.css
+file
+
+
+
+
+2012-02-01T05:32:46.000000Z
+2a63673035dfa71c6d2234dc8814c3de
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+
+contract
+dir
+

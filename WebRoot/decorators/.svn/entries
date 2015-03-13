@@ -1,0 +1,52 @@
+8
+
+dir
+396
+https://10.135.6.178/svn/HIBC/trunk/Code/hibc-app/src/main/webapp/decorators
+https://10.135.6.178/svn/HIBC
+
+
+
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+be595114-9aed-af4d-8b1d-378cdeb1c9e0
+
+main.jsp
+file
+
+
+
+
+2012-02-01T05:32:50.000000Z
+30b016d97986be2499fda8b8ab523bed
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+
+contentonly.jsp
+file
+
+
+
+
+2012-02-01T05:32:50.000000Z
+6c0b08a3ecbd5ba5ae9b07d1f13bae51
+2012-01-11T02:40:28.170906Z
+25
+xiechuanguo
+

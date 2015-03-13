@@ -1,0 +1,15 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<div class="col-1 pa"><strong>10:55:44</strong></div>
+<div class="col-2">
+	<ul>
+		<li><a href="${dynamicURL}/contract/searchSalesContract.action">销售合同</a></li>
+		<li><a href="${dynamicURL}/contract/searchPurchaseContract.action">采购合同</a></li>
+		<li><a href="${dynamicURL}/contract/searchInitSalesApproveContract.action">销售合同评审</a></li>
+		<li><a href="${dynamicURL}/contract/searchInitPurchaseApproveContract.action">采购合同评审</a></li>
+		<li><a href="${dynamicURL}/contract/approveInitSalesPurchaseContract.action">对缝评审</a></li>
+		<li><a href="${dynamicURL}/pricelist/searchContractPrice.action">定价单评审</a></li>
+		<li><a href="${dynamicURL}/pricelist/searchContractComplement.action">客户及型号编码补录</a></li>
+		<li><a href="${dynamicURL}/order/searchDraftZOROrder.action">定单确认</a></li>
+		<li><a href="${dynamicURL}/order/searchZOROrder.action">定单查询</a></li>
+	</ul>
+</div>

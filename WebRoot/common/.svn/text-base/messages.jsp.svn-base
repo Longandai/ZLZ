@@ -1,0 +1,17 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<s:if test="hasActionErrors()||hasFieldErrors()">
+	<div class="errorMessage" id="_error_message_box">
+      <s:iterator value="actionErrors">
+        <s:property/><br />
+      </s:iterator>
+      <s:iterator value="fieldErrors">
+          <s:iterator value="value">
+             <s:property/><br />
+          </s:iterator>
+      </s:iterator>
+    </div>
+</s:if>
+<s:else>
+	<div id="_error_message_box">
+	</div>
+</s:else>

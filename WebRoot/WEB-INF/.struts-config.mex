@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/userForm.do" location="50,50" dimension="238,84" />
+  <StrutsActivity path="/selectCust.do" location="50,250" dimension="238,84" />
+  <StrutsActivity path="/selectCustRecord.do" location="50,450" dimension="286,84" />
+  <StrutsActivity path="/selectModelInfo.do" location="950,550" dimension="280,84" />
+  <StrutsActivity path="error;6" location="350,150" dimension="154,72" />
+  <StrutsActivity path="/main.jsp" location="950,150" dimension="94,48" />
+  <StrutsActivity path="/Customer/viewCust.jsp" location="650,350" dimension="172,48" />
+  <StrutsActivity path="/CustomerRecord/viewCustRecord.jsp" location="650,550" dimension="244,48" />
+  <StrutsActivity path="/mainRecord.jsp" location="950,450" dimension="130,48" />
+  <StrutsActivity path="/MasterDataInfo/selectModelInfo.jsp" location="350,650" dimension="250,48" />
+  <StrutsActivity path="/error.jsp" location="950,350" dimension="100,48" />
+  <StrutsActivity path="/CustomerRecord/viewCust.jsp" location="650,450" dimension="208,48" />
+  <StrutsActivity path="/User/userForm.jsp" location="350,50" dimension="148,48" />
+  <StrutsActivity path="/success.jsp" location="650,150" dimension="112,48" />
+  <StrutsActivity path="/index.jsp" location="950,50" dimension="100,48" />
+  <StrutsActivity path="index.jsp" location="650,50" dimension="94,48" />
+  <StrutsActivity path="/pages/refresh/QueryResultset.jsp" location="650,250" dimension="238,48" />
+  <StrutsActivity path="/pages/refresh/QueryConditionDialog.jsp" location="950,250" dimension="274,48" />
+  <StrutsActivity path="/Customer/addCust.jsp" location="350,350" dimension="166,48" />
+  <StrutsActivity path="/selectModelInfo.jsp" location="50,650" dimension="160,48" />
+  <StrutsActivity path="/MasterDataInfo/index.jsp" location="650,650" dimension="190,48" />
+  <StrutsActivity path="/MasterDataInfo/modelIndex.jsp" location="50,750" dimension="220,48" />
+  <StrutsActivity path="/MasterDataInfo/i.jsp" location="350,750" dimension="166,48" />
+  <StrutsActivity path="/Analyse/masterDataAnalyse.jsp" />
+  <StrutsTransition id="/userForm.do,success,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectCust.do,success,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="288,313" />
+      <AbsolutePoint location="933,313" />
+      <AbsolutePoint location="933,174" />
+      <AbsolutePoint location="950,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectCustRecord.do,success,/mainRecord.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectCust.do,masterDataAnalyse,/Analyse/masterDataAnalyse.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectModelInfo.do,success,/MasterDataInfo/selectModelInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,613" />
+      <AbsolutePoint location="475,613" />
+      <AbsolutePoint location="475,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectCustRecord.do,viewCust,/CustomerRecord/viewCustRecord.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="error;6,null,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="427,186" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/selectCust.do,viewCust,/Customer/viewCust.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

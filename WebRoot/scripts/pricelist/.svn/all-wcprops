@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/HIBC/!svn/ver/759/trunk/Code/hibc-app/src/main/webapp/assets/scripts/pricelist
+END
+create_price.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HIBC/!svn/ver/759/trunk/Code/hibc-app/src/main/webapp/assets/scripts/pricelist/create_price.js
+END
+complementprice.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/HIBC/!svn/ver/646/trunk/Code/hibc-app/src/main/webapp/assets/scripts/pricelist/complementprice.js
+END
+searchprice.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/HIBC/!svn/ver/759/trunk/Code/hibc-app/src/main/webapp/assets/scripts/pricelist/searchprice.js
+END
+checkprice.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/HIBC/!svn/ver/759/trunk/Code/hibc-app/src/main/webapp/assets/scripts/pricelist/checkprice.js
+END

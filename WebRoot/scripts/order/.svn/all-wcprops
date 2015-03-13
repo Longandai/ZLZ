@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/HIBC/!svn/ver/811/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order
+END
+zorOrder.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/HIBC/!svn/ver/796/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order/zorOrder.js
+END
+contractPriceOrder.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/HIBC/!svn/ver/811/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order/contractPriceOrder.js
+END
+updateOrder.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/HIBC/!svn/ver/811/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order/updateOrder.js
+END
+createOrder.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/HIBC/!svn/ver/811/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order/createOrder.js
+END
+searchOrder.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/HIBC/!svn/ver/741/trunk/Code/hibc-app/src/main/webapp/assets/scripts/order/searchOrder.js
+END

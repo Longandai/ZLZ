@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@page import="com.opensymphony.xwork2.ActionContext"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/page" prefix="page"%>
+<html>
+    <head>
+    <%@ include file="/common/meta.jsp" %>
+    <title><decorator:title default="海尔开放平台-showcase系统"/></title>
+    <jsp:include page="/common/css_and_js.jsp" />
+   	<decorator:head/>
+    </head>
+<body<decorator:getProperty property="body.id" writeEntireProperty="true"/> <decorator:getProperty property="body.class" writeEntireProperty="true"/> >
+     <div class="wp">
+     	  <!-- 公共头部 -->
+		  <div class="hd pr">
+		  	<jsp:include page="/common/header.jsp"/>
+		  </div>
+		  <div class="nav pr">
+		  	<jsp:include page="/common/navigation.jsp" />
+		  </div>
+		  <div class="bd pr">
+	  		<!-- 左侧菜单栏 -->
+	  		<div class="col-1 pa">
+	  			<decorator:usePage id="thePage" /> 
+				<% 
+					String module = ActionContext.getContext().getActionInvocation()
+						.getProxy().getNamespace();
+					if(module.startsWith("/")){
+						module = module.substring(1,module.length());
+					}
+					request.setAttribute("_module_", module);
+				%>
+				<s:action name="leftMenu" namespace="/" executeResult="true">
+					<s:param name="packageName" value="#request['_module_']"></s:param>
+				</s:action>
+	  		</div>
+	  		<!-- 动态核心内容部分 -->
+	  		<div class="col-2" style="margin-right:0.5px;">
+	  			<dl>
+	  				<decorator:body/>
+	  			</dl>
+	  		</div>
+	  	</div>
+	  	<!-- 页脚 -->
+	  	<jsp:include page="/common/footer.jsp"/>
+	  </div>
+</body>
+</html>

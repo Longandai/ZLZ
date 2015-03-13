@@ -1,0 +1,387 @@
+.body_main
+{
+	background-color:#F5F5F5;
+	margin-left:5px;
+	margin-top:6px;
+	margin-bottom:0px;
+	font-size:9pt;
+	color:#000000;
+
+   	SCROLLBAR-BASE-COLOR: #9DBFD9;		//#E5FFE5;	/*rgb(66,93,128);*/
+	SCROLLBAR-FACE-COLOR: #D8E7F2;		//#E5FFE5;//#C8FFC8;	/*#edeff8;*/
+
+   	SCROLLBAR-SHADOW-COLOR: #0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-3DLIGHT-COLOR:#0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-ARROW-COLOR:  #0159BD;		//#73BE7B;		/* #adb6de; */
+
+   	SCROLLBAR-TRACK-COLOR: #ffffff;		//#EBF5E0;		//#E5FFE5;//#ffffff;
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+}
+
+.body_info
+{
+	background-color:#F0F5F9;
+	margin-left:5px;
+	margin-top:6px;
+	margin-bottom:0px;
+	font-size:9pt;
+	color:#000000;
+
+   	SCROLLBAR-BASE-COLOR: #9DBFD9;		//#E5FFE5;	/*rgb(66,93,128);*/
+	SCROLLBAR-FACE-COLOR: #D8E7F2;		//#E5FFE5;//#C8FFC8;	/*#edeff8;*/
+
+   	SCROLLBAR-SHADOW-COLOR: #0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-3DLIGHT-COLOR:#0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-ARROW-COLOR:  #0159BD;		//#73BE7B;		/* #adb6de; */
+
+   	SCROLLBAR-TRACK-COLOR: #E4EAEF;		//#EBF5E0;;		//#E5FFE5;//#ffffff;
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+}
+
+.body_button
+{
+	background-color:#C0CFEC;
+	margin-left:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:9pt;
+	color:#000000;
+}
+.body_code
+{
+	background-color:#D1EAF5;
+	margin-left:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size:9pt;
+	color:#000000;
+
+	SCROLLBAR-FACE-COLOR: #B4DCED;
+	SCROLLBAR-BASE-COLOR: #86B7CC;
+	
+   	SCROLLBAR-SHADOW-COLOR: #0159BD;
+   	SCROLLBAR-3DLIGHT-COLOR:#0159BD;
+   	SCROLLBAR-ARROW-COLOR:  #0159BD;
+
+   	SCROLLBAR-TRACK-COLOR: #CBE4EF;
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+}
+.body_organtree
+{
+	background-color:#FFFFFF;
+	margin-left:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:0px;
+	font-size:9pt;
+	color:#000000;
+}
+.body_query
+{
+	background-color:#F5F5F5;
+	margin-left:5px;
+	margin-top:6px;
+	margin-bottom:0px;
+	margin-right:0px;
+	font-size:9pt;
+	color:#000000;
+}
+.table_main
+{
+	width:100%;
+	background-color:#0159BD;
+	border:0px;
+}
+
+
+p, td, tr, select
+{
+	font-size:9pt;
+}
+
+
+a
+{
+	color:#666699;
+	text-decoration:none;
+}
+a:hover
+{
+	COLOR:#003399;
+	text-decoration:none;
+}
+
+.input
+{
+	font-size:9pt;
+	border: 1px solid #7F9DB9;
+	height:20px;
+	cursor:text;
+	color:#000000;
+	background-color:#FFFFFF
+}
+
+.input_hide
+{
+	font-size:9pt;
+	border: 0px solid #7F9DB9;
+	height:20px;
+	cursor:text;
+	color:#000000;
+	background-color:#FFFFFF
+}
+
+/*===========================================*/
+
+INPUT.Combobox {
+	font-size:9pt;
+/*	background:		#d4d0c8;
+*/
+	border: 1px solid #7F9DB9;
+	border-right-width: 0;
+	height:20px;
+	cursor:default
+}
+
+INPUT.CheckBox {
+	border: 0px;
+	font-size:9pt;
+	cursor:default;
+}
+
+INPUT.Radio {
+	font-size:9pt;
+	cursor:default;
+	border: 0px;
+}
+
+
+TextArea
+{
+	font-size:9pt;
+	border: 1px solid #7F9DB9;
+	width:90%;
+}
+
+.ReadOnly
+{
+	font-size:9pt;
+	background-color: #EDEFF3
+}
+
+SELECT
+{
+	font-size:9pt;
+	border:1px solid #ADAFF8;
+	background:transport;
+}
+
+Img
+{
+	Cursor:hand
+}
+
+.inBorder
+{
+	font-size:9pt;
+	border-style: inset;
+	border-width:1px
+}
+
+.outBorder
+{
+	font-size:9pt;
+	border-style: outset;
+	 border-width:1px
+}
+
+TD.EditBox
+{
+	font-size:9pt;
+	cursor:text;
+	border-style: inset;
+	border-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	background-color: #ffffff;
+}
+
+TD.Hide
+{
+	display:none
+}
+
+.List
+{
+    border:1px solid #000000;
+    FONT: messagebox
+}
+
+Div.InfoList
+{
+ OVERFLOW-Y: auto;
+ OVERFLOW-X: auto;
+ PADDING-BOTTOM: 11px;
+ width:100%;
+ height:400
+
+}
+
+Div.ListHeader
+{
+ OVERFLOW: hidden;
+ width:100%
+}
+
+DIV.Show
+{
+    /*  background: buttonface;*/
+    border-style: none;
+    position:static;
+    z-index:1;
+    height:100%;
+    width:100%;
+    vertical-align:middle;
+    DISPLAY:block
+}
+
+
+DIV.Hide
+{
+    BACKGROUND-COLOR: #d4d0c8;
+    border-style: none;
+    position:static;
+    z-index:10;
+    height:100%;
+    width:100%;
+    DISPLAY:none
+}
+
+.organdiv
+{
+	background-color: #ffffff;
+    cursor:default;
+    
+   	SCROLLBAR-BASE-COLOR: #9298B0;		//#E5FFE5;	/*rgb(66,93,128);*/
+	SCROLLBAR-FACE-COLOR: #ECECEC;		//#E5FFE5;//#C8FFC8;	/*#edeff8;*/
+
+   	SCROLLBAR-SHADOW-COLOR: #0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-3DLIGHT-COLOR:#0159BD;		//#73BE7B;	/* #adb6de; */
+   	SCROLLBAR-ARROW-COLOR:  #0159BD;		//#73BE7B;		/* #adb6de; */
+
+   	SCROLLBAR-TRACK-COLOR: #F6F6F6;		//#EBF5E0;		//#E5FFE5;//#ffffff;
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+}
+
+.codediv
+{
+	background-color: #F5F5F5;
+    cursor:default;
+}
+
+div.infoArea {
+	CLEAR: both;
+	height:100%;
+	BORDER-RIGHT: rgb(145,155,156) 1px solid;
+	PADDING: 10px;
+	BORDER-TOP: rgb(145,155,156) 1px solid;
+	BACKGROUND: rgb(252,252,254);
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fffcfcfe, EndColorStr=#fff4f3ee, GradientType=0)
+					progid:DXImageTransform.Microsoft.Shadow(Color=#ff919899, Strength=2, Direction=135);
+	BORDER-LEFT: rgb(145,155,156) 1px solid;
+	COLOR: black;
+	BORDER-BOTTOM: rgb(145,155,156) 1px solid;
+	POSITION: relative;
+	TOP: 2px
+}
+
+TR.selected
+{
+    BACKGROUND-COLOR: #E5E9F8;/*0159BD;*/
+    COLOR: black;
+    cursor:hand;
+}
+
+TR.onit
+{
+    BACKGROUND-COLOR: #EEEEEE;
+    COLOR: black;
+    cursor:hand;
+}
+TR.title
+{
+	background-color:#0159BD;
+	cursor:default;
+	text-align=middle;
+	height=25;
+}
+TD.title
+{
+	background-color:#0159BD;
+	cursor:default;
+	text-align=middle;
+	height=25;
+}
+TR.normal
+{
+    BACKGROUND-COLOR: rgb(255,255,255);
+    COLOR: black;
+    cursor:hand
+}
+
+.info
+{
+	border-style: none;
+	/*  background: buttonface;*/
+	/*background:		#f9f8f7 url("../images/background.gif");*/
+	cursor:default;
+	FONT: messagebox
+}
+.report
+{
+	border-style: none;
+	background-color:#d400c8;
+	cursor:default
+}
+iFrame
+{
+	border-style:none;
+	border-width:1px
+}
+
+FIELDSET
+{
+	PADDING:5px
+}
+
+SPAN
+{
+	cursor:default;
+	font:messagebox;
+}
+
+.DocData
+{
+	border-style: inset;
+	border-width:1px ;
+	width:100%;
+	overflow: auto;
+	background: window;
+}
+
+/*°´ť*/
+.button
+{
+	background: #efefef url("../images/menubar.gif");
+	cursor:hand;
+	border:1px solid #6F6F6F;
+	font:messagebox;
+	width:85px;
+	height:20px;
+	overflow: hidden;
+}

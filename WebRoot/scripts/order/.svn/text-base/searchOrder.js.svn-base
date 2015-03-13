@@ -1,0 +1,21 @@
+		$(function(){
+			$('#create').click(function(){
+				$('#searchOrderForm').attr("action","createOrderInit.action");
+				$('#searchOrderForm').submit();
+			 });
+			$('#query').click(function(){
+				$('#searchOrderForm').attr("action","searchOrder.action");
+				$('#searchOrderForm').submit();
+			 });
+			$('#update').click(function(){
+				$('#searchOrderForm').attr("action","updateOrderInit.action");
+				$('#searchOrderForm').submit();
+			 });
+			$('#delete').click(function(){
+				if (confirm("您确信要删除吗？"))
+				{
+					$('#searchOrderForm').attr("action","deleteOrder.action");
+					$('#searchOrderForm').submit();
+				}
+			 });
+		});

@@ -1,0 +1,380 @@
+BODY
+{
+    background: #EFF6FD;
+   /* background:		#f9f8f7 url("../images/background.gif");*/
+    FONT: messagebox;   
+    SCROLLBAR-FACE-COLOR: #edeff8; 
+   	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+   	SCROLLBAR-SHADOW-COLOR: #adb6de; 
+   	SCROLLBAR-3DLIGHT-COLOR: #adb6de; 
+   	SCROLLBAR-ARROW-COLOR: #adb6de; 
+   	SCROLLBAR-TRACK-COLOR: #ffffff; 
+   	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+   	SCROLLBAR-BASE-COLOR: rgb(66,93,128);
+ 	MARGIN: 1px 3px 3px 3px
+}
+
+BODY.BtnBody
+{
+	 background: #F7FBFF;  
+ 	 MARGIN: 11 0 0 0;
+}
+button        
+{
+	background: #efefef url("../images/menubar.gif");
+	cursor:hand;
+	border:1px solid #6F6F6F;
+	font:messagebox;
+	width:85px;
+	height:20px;
+	overflow: hidden;
+}
+
+INPUT {
+	FONT: messagebox;
+/*	background:transport;*/
+	/*background:		#d4d0c8; /*url("../images/background.gif");*/
+/*	border-width:1px solid #7F9DB9;*/
+	border: 1px solid #7F9DB9;
+/*	border-right-width: 0; 
+	border-top-width: 0; 
+	border-left-width: 0; */
+	height:20px;
+	cursor:default
+}
+
+INPUT.Combobox {
+	FONT: messagebox;
+/*	background:transport;*/
+	/*background:		#d4d0c8; /*url("../images/background.gif");*/
+/*	border-width:1px;*/
+	border: 1px solid #7F9DB9;
+	border-right-width: 0; 
+/*	border-top-width: 0; 
+	border-left-width: 0; */
+	height:20px;
+	cursor:default
+}
+
+.inputFile {
+	background-color: #FFFFFF;
+	border-top-width: 1px; 
+	border-right-width: 1px;
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	font-family: messagebox; 
+	font-size: 9pt;
+}
+
+INPUT.CheckBox {
+	border: 0px;
+	FONT: messagebox;
+	cursor:default;
+}
+
+INPUT.Radio {
+	FONT: messagebox;
+	cursor:default;
+	border: 0px;
+}
+
+
+
+TextArea
+{
+	FONT: messagebox;
+/*	background:transport;*/
+	/*background:		#d4d0c8; /*url("../images/background.gif");*/
+/*	border-width:1px #ADAFF8;*/
+	border: 1px solid #7F9DB9;
+/*	border-right-width: 0; 
+	border-top-width: 0; 
+	border-left-width: 0; */
+	width:100%;
+
+}
+
+.ReadOnly
+{
+FONT: messagebox;
+background-color: #C0C0C0
+}
+
+SELECT 
+{
+	FONT: messagebox;
+	border:1px solid #ADAFF8;
+	background:transport;
+}
+
+FORM {
+	MARGIN: 0px
+}
+Img
+{
+ Cursor:hand
+}
+TABLE
+{
+    BORDER-BOTTOM: 1 none;
+    BORDER-LEFT: 1 none;
+    BORDER-RIGHT: 1 none;
+    BORDER-TOP: 1 none;
+    FONT: messagebox;  
+	/*BACKGROUND: rgb(252,252,254); */
+    overflow: hidden
+}
+TD
+{
+    FONT: messagebox;
+    border-style: none;     
+}
+
+.inBorder
+{
+    FONT: messagebox;
+    border-style: inset;
+	border-width:1px    
+}
+
+.outBorder
+{
+    FONT: messagebox;
+    border-style: outset;
+	 border-width:1px    
+}
+
+TD.EditBox
+{
+    FONT: messagebox;
+    cursor:text;
+    border-style: inset; 
+    border-width: 2px; 
+    border-right-width: 2px; 
+    border-bottom-width: 2px; 
+    border-left-width: 2px;
+    background-color: #ffffff;
+}
+TD.Hide
+{ 
+ display:none
+}
+
+A
+{
+    COLOR: blue;
+    FONT: messagebox;
+    TEXT-DECORATION: none;
+    cursor:hand
+}
+A:hover
+{
+    COLOR: red;
+    TEXT-DECORATION: underline;
+    FONT: messagebox;
+/*    background:		#B5BED6;
+*/
+}
+
+.Title
+{
+  background: #cccccc;
+  BORDER-RIGHT: buttonshadow 1px solid; 
+  PADDING-RIGHT: 5px; 
+  BORDER-TOP: buttonhighlight 1px solid; 
+  PADDING-LEFT: 5px;  
+  BORDER-LEFT: buttonhighlight 1px solid; 
+  BORDER-BOTTOM: buttonshadow 1px solid;
+	cursor:default
+}
+
+.SubTitle
+{
+  BORDER-RIGHT: buttonshadow 1px solid; 
+  PADDING-RIGHT: 5px; 
+  BORDER-TOP: buttonhighlight 1px solid; 
+  PADDING-LEFT: 5px;  
+  BORDER-LEFT: buttonhighlight 1px solid; 
+  BORDER-BOTTOM: buttonshadow 1px solid;
+	cursor:default
+}
+
+.List
+{
+    border:1px solid #000000;
+    FONT: messagebox
+}
+
+Div.InfoList
+{
+ OVERFLOW-Y: auto; 
+ OVERFLOW-X: auto; 
+ PADDING-BOTTOM: 11px; 
+ width:100%;
+ height:400
+ 
+}
+
+Div.ListHeader
+{
+ OVERFLOW: hidden; 
+ width:100%
+}
+
+DIV.Show
+{
+    /*  background: buttonface;*/
+    border-style: none;  
+    position:static;
+    z-index:1;
+    height:100%;
+    width:100%;
+    vertical-align:middle;
+    DISPLAY:block   
+}
+
+
+DIV.Hide
+{
+    BACKGROUND-COLOR: #d4d0c8;
+    border-style: none;  
+    position:static;
+    z-index:10;
+    height:100%;
+    width:100%;
+    DISPLAY:none
+}
+
+DIV
+{
+    cursor:default
+}
+
+div.InfoArea {
+	CLEAR: both; 
+	height:100%;
+	BORDER-RIGHT: rgb(145,155,156) 1px solid; 
+	PADDING: 10px; 
+	BORDER-TOP: rgb(145,155,156) 1px solid; 
+	BACKGROUND: rgb(252,252,254); 
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fffcfcfe, EndColorStr=#fff4f3ee, GradientType=0)
+					progid:DXImageTransform.Microsoft.Shadow(Color=#ff919899, Strength=2, Direction=135); 
+	BORDER-LEFT: rgb(145,155,156) 1px solid; 
+	COLOR: black; 
+	BORDER-BOTTOM: rgb(145,155,156) 1px solid; 
+	POSITION: relative; 
+	TOP: 2px
+}
+
+TR.Selected
+{
+    BACKGROUND-COLOR: royalblue;
+    COLOR: white;
+    FONT: messagebox;
+    cursor:hand;
+}
+
+TR.onit
+{
+    BACKGROUND-COLOR: #EEEEEE;
+    COLOR: black;
+    FONT: messagebox;
+    cursor:hand;
+}
+
+TR.Normal
+{
+    BACKGROUND-COLOR: rgb(255,255,255);
+    COLOR: black;
+    FONT: messagebox;
+    cursor:hand;
+    align:left;
+}
+
+TD.noclick
+{
+    BACKGROUND-COLOR: rgb(255,255,255);
+    COLOR: black;
+    FONT: messagebox;
+    cursor:hand
+}
+
+.Info 
+{  
+	border-style: none; 
+	/*  background: buttonface;*/
+	/*background:		#f9f8f7 url("../images/background.gif");*/
+	cursor:default;
+	FONT: messagebox
+}
+.Report
+{  
+	border-style: none; 
+	background-color:#d400c8;
+	cursor:default
+}
+IFrame 
+{
+	border-style:none;
+	border-width:1px
+}
+
+FIELDSET
+{
+	PADDING:5px
+}
+
+SPAN
+{
+	cursor:default;
+	font:messagebox;
+}
+
+.DocData
+{
+	border-style: inset;
+	border-width:1px ;
+	width:100%;
+	overflow: auto;
+	background: window;
+}
+
+.popmenu 
+{
+	position: absolute; 
+	font:messagebox; 
+	background-color: #DEDBD6;//#99ccff; 
+	border: 1 solid #000000; 
+	padding-left: 20px;
+}
+
+.QQContextTable
+{
+	background-color:	#EFF6FD;
+	color:				Black;
+	margin:				0;
+	padding:			0;
+	overflow:			hidden;
+	border:				0;
+	cursor:				default;
+}
+
+.QQContextTR
+{
+}
+
+.QQContextTD
+{
+	font:messageBox;
+	height:			19px;
+}
+
+
+
+
+
+
+
+
+
+

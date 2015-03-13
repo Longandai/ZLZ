@@ -1,0 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<div class="logo pa"><a href=""><img src="${staticURL}/images/logo.jpg" alt="" /></a></div>
+<div class="msg pa">
+	 <a href="" class="msg2">系统消息<span>0</span></a><a href="" class="msg1">即时通信<span>35</span></a>
+</div>

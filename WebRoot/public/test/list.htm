@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>用户列表-test</title>
+</head>
+<link  type="text/css" rel="stylesheet" href="../../dbgrid/dbgrid.css">
+<body>
+<script  type="text/javascript" src="../../dbgrid/dbgrid.js"></script>
+<script  type="text/javascript" src="../../dbgrid/genresize.js"></script>
+<script  type="text/javascript" src="../../dbgrid/tablesort.js"></script>
+<script  type="text/javascript" src="./js/eventHandler.js"></script>
+<script language="javascript">
+  var sortColumnName="";
+  var sortType="desc";
+</script>
+<DIV class="scrollTable" id="ScrollArea">
+<SPAN class="scrollTableHead" id="HeaderSpan">
+<table cellspacing="0" frame="border" id="HeaderTable" onclick="sortColumn(event);ResizeAll();">
+<thead>
+   <tr>
+       <td width="40px" align="center" nowrap class="NoClick"><nobr>&nbsp;序号&nbsp;</nobr></td>
+       <td class="resizeMe" id="1"><nobr>&nbsp;用户代码&nbsp;</nobr></td>
+       <td class="resizeMe" id="2"><nobr>&nbsp;用户名称&nbsp;</nobr></td>
+       <td class="resizeMe" id="3"><nobr>&nbsp;联系方式&nbsp;</nobr></td>
+       <td class="resizeMe" id="4"><nobr>&nbsp;过期日期&nbsp;</nobr></td>
+       <td class="resizeMe" id="5"><nobr>&nbsp;是否注销&nbsp;</nobr></td>
+       <td class="NoClick"></td>
+   </tr>
+</thead>
+<TBODY>
+</TBODY>
+</table>
+</span>
+
+<SPAN class="scrollTableBody" oncontextmenu="ContextMenu();" onscroll="SynScroll();">
+<form name="listForm" method="post">
+<TABLE id="ListTable" cellSpacing="0">
+<TBODY>
+    <tr>
+        <td width="40px" nowrap align="center"><nobr>001</nobr></td>
+        <td><nobr>myID3</nobr></td>
+        <td><nobr>userName</nobr></td>
+	<td><nobr>contactType1</nobr></td>
+	<td><nobr>getLastDate</nobr></td>
+	<td><nobr>forbided</nobr></td>
+    </tr>
+    <tr>
+        <td width="40px" nowrap align="center"><nobr>001</nobr></td>
+        <td><nobr>myID2</nobr></td>
+        <td><nobr>userName</nobr></td>
+	<td><nobr>contactType2</nobr></td>
+	<td><nobr>getLastDate</nobr></td>
+	<td><nobr>forbided</nobr></td>
+    </tr>
+    <tr>
+        <td width="40px" nowrap align="center"><nobr>001</nobr></td>
+        <td><nobr>myID1</nobr></td>
+        <td><nobr>userName</nobr></td>
+	<td><nobr>contactType3</nobr></td>
+	<td><nobr>getLastDate</nobr></td>
+	<td><nobr>forbided</nobr></td>
+    </tr>
+</TBODY>
+</TABLE>
+</form>
+</SPAN>
+</DIV>
+<script  type="text/javascript" src="../../dbgrid/eventHandler.js"></script>
+</body>
+</html>

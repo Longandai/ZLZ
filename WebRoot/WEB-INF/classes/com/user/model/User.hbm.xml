@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+
+>
+
+    <class
+            name="com.user.model.User"
+            table="ZLZ_USER"
+            dynamic-update="true"
+            dynamic-insert="true"
+    >
+
+    <id
+        name="userid"
+            column="userid"
+            length="20"
+            unsaved-value="null"
+    >
+
+    <!-- The generator-class attribute of @hibernate.id is deprecated, use the @hibernate.generator tag instead -->
+    <generator class="native">
+
+    </generator>
+
+    </id>
+
+        <property
+            name="username"
+                    column="username"
+        >
+
+        </property>
+		<property
+            name="userpassword"
+                    column="userpassword"
+        >
+
+        </property>
+        <property
+            name="usercreate"
+                    column="usercreate"
+        >
+
+        </property>
+        <property
+            name="userceateby"
+                    column="userceateby"
+        >
+
+        </property>
+        <property
+            name="deleteflag"
+                    column="deleteflag"
+        >
+
+        </property>
+       
+
+       
+
+    </class>    
+
+</hibernate-mapping>
+

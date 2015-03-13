@@ -1,0 +1,12 @@
+<decorators defaultdir="/decorators">
+    <excludes>
+        
+        <pattern>/index.jsp</pattern>
+        <pattern>/error.jsp</pattern>
+        <pattern>*/public/*</pattern>
+        
+    </excludes> 
+    <decorator name="default" page="main.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

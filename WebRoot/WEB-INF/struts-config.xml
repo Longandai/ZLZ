@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="userFormForm" type="com.struts.form.UserFormForm" />
+    <form-bean name="selectCustForm" type="com.struts.form.SelectCustForm" />
+    <form-bean name="selectCustRecordForm" type="com.struts.form.SelectCustRecordForm" />
+    <form-bean name="selectModelInfoForm" type="com.struts.form.selectModelInfoForm" />
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards>
+		<forward name="error" path="/error.jsp" />
+	</global-forwards>
+  <action-mappings >
+    <action
+      validate="false"
+      parameter="method"
+      name="userFormForm"
+      path="/userForm"
+      scope="request"
+      type="com.struts.action.UserFormAction" >
+      <forward name="success" path="/main.jsp"/>
+      
+    </action>
+    
+    <action
+      validate="false"
+      parameter="method"
+      name="selectCustForm"
+      path="/selectCust"
+      scope="request"
+      type="com.struts.action.SelectCustAction" >
+      <forward name="success" path="/main.jsp"/>
+      <forward name="viewCust" path="/Customer/viewCust.jsp"/>
+      <forward name="masterDataAnalyse" path="/Analyse/masterDataAnalyse.jsp"/>
+    </action>
+    <action
+      validate="false"
+      parameter="method"
+      name="selectCustRecordForm"
+      path="/selectCustRecord"
+      scope="request"
+      type="com.struts.action.SelectCustRecordAction" >
+      <forward name="success" path="/mainRecord.jsp"/>
+      <forward name="viewCust" path="/CustomerRecord/viewCustRecord.jsp"/>
+    </action>
+    <action 
+      validate="false"
+      parameter="method"
+      name="selectModelInfoForm"
+      path="/selectModelInfo"
+      scope="request"
+      type="com.struts.action.SelectModelInfoAction" >
+      <forward name="success" path="/MasterDataInfo/selectModelInfo.jsp"/>
+    </action>
+
+    
+  
+  </action-mappings>
+
+  <message-resources parameter="com.struts.ApplicationResources" />
+</struts-config>
+
